@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+GTA Tamilnadu/Library/
+GTA Tamilnadu/Logs/
+GTA Tamilnadu/Temp/
+GTA Tamilnadu/UserSettings/
+GTA Tamilnadu/Builds/

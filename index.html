@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> VANAKKAM CHENNAI </title>
+  <meta name="description" content="A GTA-inspired open-world 3D action game set in Chennai, India">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="game-container">
+
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div id="health-container">
+        <div id="health-icon">❤</div>
+        <div id="health-bar">
+          <div id="health-fill"></div>
+        </div>
+        <span id="health-text">100</span>
+      </div>
+
+      <div id="wanted-container">
+        <span class="wanted-star" data-level="1">★</span>
+        <span class="wanted-star" data-level="2">★</span>
+        <span class="wanted-star" data-level="3">★</span>
+        <span class="wanted-star" data-level="4">★</span>
+        <span class="wanted-star" data-level="5">★</span>
+      </div>
+
+      <div id="weapon-container">
+        <div id="weapon-name">Fists</div>
+        <div id="ammo-display">
+          <span id="ammo-current">—</span>
+          <span class="ammo-sep">/</span>
+          <span id="ammo-max">—</span>
+        </div>
+      </div>
+
+      <div id="speed-container" class="hidden">
+        <span id="speed-value">0</span>
+        <span id="speed-unit">KM/H</span>
+      </div>
+
+      <div id="crosshair">
+        <div class="ch-dot"></div>
+        <div class="ch-line top"></div>
+        <div class="ch-line right"></div>
+        <div class="ch-line bottom"></div>
+        <div class="ch-line left"></div>
+      </div>
+
+      <div id="minimap-container">
+        <canvas id="minimap-canvas" width="200" height="200"></canvas>
+      </div>
+
+      <div id="interaction-prompt" class="hidden">
+        Press <kbd>F</kbd> to enter vehicle
+      </div>
+
+      <div id="landmark-prompt" class="hidden">
+        Press <kbd>E</kbd> to inspect landmark
+      </div>
+
+      <div id="landmark-toast" class="hidden">
+        <div id="landmark-toast-title"></div>
+        <div id="landmark-toast-body"></div>
+      </div>
+
+      <div id="fps-counter">0 FPS</div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="screen-content">
+        <h1 class="game-title">VANNAKAM <span class="accent">CHENNAI</span></h1>
+        <p class="game-subtitle">DEVELOPED BY SELVA</p>
+        <div class="loading-bar-wrap">
+          <div id="loading-bar"></div>
+        </div>
+        <p id="loading-text">Generating city…</p>
+      </div>
+    </div>
+
+    <!-- Title Screen -->
+    <div id="title-screen" class="hidden">
+      <div class="screen-content">
+        <h1 class="game-title glow">CHENNAI<span class="accent">VICE</span></h1>
+        <p class="game-subtitle">OPEN WORLD</p>
+        <button id="btn-play" class="menu-btn pulse">► PLAY</button>
+        <p class="hint">WASD move · Mouse look · F enter vehicle · LMB shoot · 1-3 weapons</p>
+      </div>
+    </div>
+
+    <!-- Pause Screen -->
+    <div id="pause-screen" class="hidden">
+      <div class="screen-content">
+        <h2 class="pause-title">PAUSED</h2>
+        <button id="btn-resume" class="menu-btn">► RESUME</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameover-screen" class="hidden">
+      <div class="screen-content">
+        <h2 class="wasted-title">WASTED</h2>
+        <button id="btn-respawn" class="menu-btn">RESPAWN</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
